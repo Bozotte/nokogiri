@@ -2,6 +2,22 @@
 
 ## unreleased
 
+### Backwards incompatibilities
+
+* Nokogiri::VersionInfo will no longer contain the following
+  keys (previously these were set only when vendored libraries were
+  being used) [#1482]:
+  * `libxml/libxml2_path`
+  * `libxml/libxslt_path`
+* `nokogiri -v` will no longer emit these VersionInfo values [#1482]
+* these C macros will no longer be defined [#1482]:
+  * NOKOGIRI_LIBXML2_PATH
+  * NOKOGIRI_LIBXSLT_PATH
+* these global variables will no longer be defined [#1482]:
+  * NOKOGIRI_LIBXML2_PATH
+  * NOKOGIRI_LIBXSLT_PATH
+
+
 ### Features
 
 * [MRI] Handle Xcode 10's new library path on macOS. [#1801, #1851] (Thanks, @mlj and @deepj!)
